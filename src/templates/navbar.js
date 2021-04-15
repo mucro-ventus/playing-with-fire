@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 const Navbar = ({data}) => {
     return (
         <div>
-            <a href="#">Characters</a>
-            <div>
+            <a href="#" class="character-menu-button">Characters</a>
+            <div class="character-menu">
                 <ul>
                     {data.character.edges.node.name.forEach(character => {
                         return <li>{character}</li>
@@ -19,13 +19,11 @@ const Navbar = ({data}) => {
 export default Navbar
 
 export const pageQuery = graphql`
-    query()=> {
-        character: allContentfullCharacter {
-            edges {
-                node {
-                    name
-                }
-            }
+character: allContentfullCharacter {
+    edges {
+        node {
+            name
         }
     }
+}
 `
