@@ -7,9 +7,13 @@ const Navbar = ({data}) => {
             <a href="#" class="character-menu-button">Characters</a>
             <div class="character-menu">
                 <ul>
-                    {data.character.edges.node.name.forEach(character => {
-                        return <li>{character}</li>
-                    })}
+                {data.map(({ node }) => {
+                    return (
+                        <li key={node.name}>
+                            <p>{node.name}</p>
+                        </li>
+                    )
+                })}
                 </ul>
             </div>
         </div>
@@ -17,13 +21,3 @@ const Navbar = ({data}) => {
 }
 
 export default Navbar
-
-export const pageQuery = graphql`
-character: allContentfullCharacter {
-    edges {
-        node {
-            name
-        }
-    }
-}
-`
