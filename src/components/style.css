@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.navbar {
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

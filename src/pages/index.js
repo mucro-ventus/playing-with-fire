@@ -22,15 +22,6 @@ class RootIndex extends React.Component {
           <Navbar data = {character} />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
           </div>
         </div>
       </Layout>

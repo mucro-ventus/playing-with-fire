@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import './style.css'
 
 const Navbar = ({data}) => {
     return (
-        <div>
+        <div class="flex navbar">
             <a href="#" class="character-menu-button">Characters</a>
             <div class="character-menu">
                 <ul>
